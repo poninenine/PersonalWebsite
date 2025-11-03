@@ -1,9 +1,18 @@
 import Image from "next/image";
+import Hero from "./components/Hero";
+import AboutMeBlock from "./components/AboutMeBlock";
 
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+      <Hero />
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+        <AboutMeBlock 
+        name="Johannes Koechling"
+        title="Electrical Engineer · Halifax, Nova Scotia"
+        bio="I build fast, accessible web apps with React and Next.js."
+        avatarSrc="/images/johannes.jpg"
+        />
         <Image
           className="dark:invert"
           src="/next.svg"
