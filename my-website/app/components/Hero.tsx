@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row w-full h-screen">
+    <section className="flex flex-col md:flex-row w-full md:h-[80vh]">
       {/* Left side - image */}
-      <div className="relative md:w-1/2 w-full h-1/2 md:h-full">
+      <div className="relative md:w-1/2 w-full h-64 md:h-full overflow-hidden md:rounded-br-[2rem]">
         <Image
           src="/images/hero.jpg"
           alt="Johannes Koechling portrait"
@@ -20,12 +20,15 @@ export default function Hero() {
         <h1 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-4">
           Johannes Koechling
         </h1>
-        <h2 className="text-lg md:text-2xl text-gray-700 dark:text-gray-300 mb-6">
-          Electrical Engineer · Creative Problem Solver
+        <h2 className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-6">
+          Electrical Engineer · Halifax, Nova Scotia
+          <br />
         </h2>
         <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-md">
-          I design innovative and efficient solutions that connect creativity
-          with engineering precision.
+          I build things, from web and mobile apps to robots to embedded systems.
+          <br />
+          <br />
+          Click the button to learn more about me, or scroll down to check out some of my work!
         </p>
         <Link
           href="/about"
