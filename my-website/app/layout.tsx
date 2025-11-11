@@ -16,6 +16,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Johannes Koechling",
   description: "Electrical engineer in Halifax, Nova Scotia.",
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: '/favicons/favicon-light.ico',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: '/favicons/favicon-dark.ico',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

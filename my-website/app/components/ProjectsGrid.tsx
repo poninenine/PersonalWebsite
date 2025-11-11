@@ -1,6 +1,13 @@
-
-
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+
+function slugify(title: string) {
+    return title
+        .toLowerCase()
+        .replace(/\s+/g, "-")      // replace spaces with hyphens
+        .replace(/[^\w-]+/g, "");  // remove non-alphanumeric characters
+}
 
 interface Project {
   id: number;
@@ -12,68 +19,64 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Capsule Timer App",
-    description: "A minimalist timer app that tracks focused practice sessions using a capsule metaphor.",
-    image: "/images/projects/capsule-timer.jpg",
-  },
-  {
-    id: 2,
     title: "MayFit Challenge",
-    description: "An iPhone app that visualizes friends’ weekly step and calorie data in SwiftUI.",
+    description: "An iPhone app that uploads, retrieves, and visualizes friends’ weekly step and calorie data in SwiftUI powered by CloudKit.",
     image: "/images/projects/mayfit.jpg",
   },
   {
+    id: 2,
+    title: "JournalStudio App",
+    description: "An app centred around the practice of voice journalling, with the state of the art transcription and summarization.",
+    image: "/images/projects/journal-studio.jpg",
+  },
+  {
     id: 3,
-    title: "Book Tracker Web App",
-    description: "A React-based reading tracker for logging books, highlights, and personal notes.",
-    image: "/images/projects/book-tracker.jpg",
+    title: "Noise Gate Guitar Pedal",
+    description: "A guitar pedal that reduces unwanted noise between notes using an op-amp based design with adjustable threshold and decay time.",
+    image: "/images/projects/noise-gate-pedal.jpg",
   },
   {
     id: 4,
     title: "Robotics Maze Solver",
     description: "A competition robot that navigates mazes and defuses mock bombs autonomously.",
-    image: "/images/projects/robotics.jpg",
+    image: "/images/projects/robot-competition.jpg",
   },
   {
     id: 5,
-    title: "Zebrafish Sensor Design",
-    description: "A sensor system that detects and analyzes vibration frequencies for zebrafish cultivation.",
-    image: "/images/projects/zebrafish.jpg",
-  },
-  {
-    id: 6,
-    title: "Down Syndrome Yoga Class Support",
-    description: "Technical support setup and automation for inclusive yoga sessions.",
-    image: "/images/projects/yoga.jpg",
+    title: "AI Personality Text-to-Speech Suite",
+    description: "A PC app in which you pick one of an assortment of entertaining characters, enter a prompt, and hear their response.",
+    image: "/images/projects/tts-app.jpg",
   },
 ];
 
 export default function ProjectsGrid() {
+
   return (
     <div className="w-full px-8 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white dark:bg-zinc-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
-          >
-            <div className="relative w-full h-48">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-              />
+          <Link href={`/projects/${slugify(project.title)}`} key={project.id}>
+            <div
+              className="bg-white dark:bg-zinc-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition"
+            >
+              <div className="relative w-full h-48">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                  {project.description}
+                </p>
+              </div>
             </div>
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-700 dark:text-gray-300 text-sm">
-                {project.description}
-              </p>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
