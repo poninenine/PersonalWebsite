@@ -6,7 +6,7 @@ export default function RoboticsMazeSolverPage() {
           Robotics Maze Solver
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-          A competition robot that navigates mazes and defuses mock bombs autonomously.
+          A robot that navigates mazes and defuses mock bombs autonomously.
         </p>
 
         <section className="mb-12">
