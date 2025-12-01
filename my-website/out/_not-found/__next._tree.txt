@@ -1,0 +1,9 @@
+1:"$Sreact.fragment"
+2:I[2916,["/_next/static/chunks/d369cd6d8352fd2d.js","/_next/static/chunks/113768d8ccd6bc3a.js"],"ViewportBoundary"]
+4:I[2916,["/_next/static/chunks/d369cd6d8352fd2d.js","/_next/static/chunks/113768d8ccd6bc3a.js"],"MetadataBoundary"]
+5:"$Sreact.suspense"
+7:I[87687,["/_next/static/chunks/d369cd6d8352fd2d.js","/_next/static/chunks/113768d8ccd6bc3a.js"],"IconMark"]
+:HL["/_next/static/chunks/d38eab1c88c53879.css","style"]
+0:{"buildId":"nwhMe8gu3hfTTkzLaIZY_","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"head":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isHeadPartial":false,"staleTime":300}
+3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+6:[["$","title","0",{"children":"Johannes Koechling"}],["$","meta","1",{"name":"description","content":"Electrical engineer in Halifax, Nova Scotia."}],["$","link","2",{"rel":"icon","href":"/favicons/favicon-light.ico","media":"(prefers-color-scheme: light)"}],["$","link","3",{"rel":"icon","href":"/favicons/favicon-dark.ico","media":"(prefers-color-scheme: dark)"}],["$","$L7","4",{}]]
