@@ -32,7 +32,7 @@ export default function Header() {
                 />
             </Link>
           </div>
-          <nav>
+          <nav className="hidden md:flex">
             <ul className="flex gap-4">
               <li>
                 <Link href="/" className="text-zinc-800 md:text-zinc-600 dark:md:text-zinc-300">
